@@ -1,5 +1,5 @@
 import React from "react";
-import reactImg from "../Images/subheading.gif";
+import reactImg from "../Images/Subheading.gif";
 import Image from "next/image";
 import HeaderItems from "./HeaderItems";
 import {
