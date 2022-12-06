@@ -170,7 +170,7 @@ function About() {
           </dd>
         </div> */}
       </dl>
-      <footer className="absolute bottom-0">
+      <footer className="absolute bottom-0 right-0">
         <p>© 2022 Gayathri R N</p>
       </footer>
     </div>

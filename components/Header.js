@@ -14,7 +14,7 @@ import {
 import { GlobeAltIcon } from "@heroicons/react/24/solid";
 import { useRouter } from "next/router";
 
-function Header() {
+function Header(props) {
   const router = useRouter();
   let type = router.query.type;
   return (
@@ -38,12 +38,14 @@ function Header() {
             title="Movies"
             Icon={FilmIcon}
             id="movies"
+            onClickSet={props.onClickSet}
             href="/?type=movies&genre=fetchingTrending&page=1"
           />
           <HeaderItems
             title="TV"
             id="tvShows"
             Icon={TvIcon}
+            onClickSet={props.onClickSet}
             href="/?type=tvShows&genre=fetchingTopRated&page=1"
           />
           <HeaderItems
