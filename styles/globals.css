@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+      @apply bg-[#040a3a] text-gray-300
+    }
+  } 
+
+  body {
+    overflow:hidden;
+  }
