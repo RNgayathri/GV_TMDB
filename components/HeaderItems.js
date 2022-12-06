@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-function HeaderItems({ title, Icon, href, id }) {
+function HeaderItems({ title, Icon, href, id, onClickSet }) {
   const router = useRouter();
   let type =
     Object.keys(router.query) != 0
@@ -11,7 +11,15 @@ function HeaderItems({ title, Icon, href, id }) {
       ? "about"
       : "contact";
   return (
-    <Link href={href}>
+    <Link
+      href={href}
+      onClick={() => {
+        onClickSet && onClickSet();
+        //window.scrollTo(0, 0);
+        // let block = document.getElementById("scrollableDiv");
+        // block && block.scrollIntoView({ behavior: "auto", block: "start" });
+      }}
+    >
       <div className="group flex-col items-center w-4 sm:w-20 hover:text-white">
         <Icon
           key={id}
