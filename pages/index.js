@@ -97,6 +97,7 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps(context) {
+  console.log(context);
   const genre = context.query.genre;
   const page = context.query.page;
   const type = context.query.type;
