@@ -26,7 +26,7 @@ function About() {
         <div className="bg-gradient-to-r from-[#cfe2e5] to-blue-500 px-4 py-5 sm:gap-4 sm:px-6 m-5 shadow sm:rounded-lg ">
           <dt className="text-lg font-bold text-gray-900">CSS</dt>
           <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-            <a href="https://tailwindcss.com/" target="_blank">
+            <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer">
               <Image
                 alt="Logo"
                 src={tailwindImage}
@@ -40,7 +40,7 @@ function About() {
             Frontend FrameWork
           </dt>
           <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-            <a href="https://nextjs.org/" target="_blank">
+            <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
               <Image
                 alt="Logo"
                 src={nextImage}
@@ -52,7 +52,11 @@ function About() {
         <div className="bg-gradient-to-r from-[#cfe2e5] to-blue-500 px-4 py-5 sm:gap-4 sm:px-6 m-5 shadow sm:rounded-lg ">
           <dt className="text-lg font-bold text-gray-900">DataBase</dt>
           <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-            <a href="https://www.themoviedb.org/" target="_blank">
+            <a
+              href="https://www.themoviedb.org/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Image
                 alt="Logo"
                 src={tmdb}
@@ -64,7 +68,7 @@ function About() {
         <div className="bg-gradient-to-r from-[#cfe2e5] to-blue-500 px-4 py-5 sm:gap-4 sm:px-6 m-5 shadow sm:rounded-lg ">
           <dt className="text-lg font-bold text-gray-900">Icons</dt>
           <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-            <a href="https://heroicons.com/" target="_blank">
+            <a href="https://heroicons.com/" target="_blank" rel="noreferrer">
               <Image
                 alt="Logo"
                 src={icons}
@@ -76,7 +80,7 @@ function About() {
         <div className="bg-gradient-to-r from-[#cfe2e5] to-blue-500 px-4 py-5 sm:gap-4 sm:px-6 m-5 shadow sm:rounded-lg ">
           <dt className="text-lg font-bold text-gray-900">Test Cases</dt>
           <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-            <a href="https://www.cypress.io/" target="_blank">
+            <a href="https://www.cypress.io/" target="_blank" rel="noreferrer">
               <Image
                 alt="Logo"
                 src={testCases}
@@ -90,7 +94,7 @@ function About() {
             Code Hosted Platform
           </dt>
           <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-            <a href="https://vercel.com/" target="_blank">
+            <a href="https://vercel.com/" target="_blank" rel="noreferrer">
               <Image
                 alt="Logo"
                 src={vercel}
