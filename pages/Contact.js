@@ -16,6 +16,7 @@ function Contact() {
               href="mailto:gayathri.9mar94@gmail.com"
               target="_blank"
               className="flex flex-col"
+              rel="noreferrer"
             >
               <EnvelopeIcon className="h-40 mb-1 inline-block" />
               <span>gayathri.9mar94@gmail.com</span>
@@ -31,6 +32,7 @@ function Contact() {
               href="https://github.com/RNgayathri"
               target="_blank"
               className="flex flex-col items-center"
+              rel="noreferrer"
             >
               <Image
                 alt="Logo"
