@@ -9,7 +9,9 @@ function HeaderItems({ title, Icon, href, id, onClickSet }) {
       ? router.query.type
       : router.pathname == "/About"
       ? "about"
-      : "contact";
+      : router.pathname == "/Contact"
+      ? "contact"
+      : "movies";
   return (
     <Link
       href={href}

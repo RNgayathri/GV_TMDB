@@ -1,5 +1,5 @@
 import React from "react";
-import requests from "../Utils/requests";
+// import requests from "../Utils/requests";
 import { useRouter } from "next/router";
 
 function Nav(props) {
@@ -9,10 +9,10 @@ function Nav(props) {
   return (
     <nav className="relative">
       <div className="flex px-10 sm:px-20 text-2xl whitespace-nowrap space-x-10 sm:space-x-20 overflow-x-scroll scrollbar-hide">
-        {requests &&
-          requests[type] != undefined &&
-          Object.entries(requests[type]).length != 0 &&
-          Object.entries(requests[type]).map(([key, { title, url }]) => (
+        {props.requests &&
+          props.requests[type] != undefined &&
+          Object.entries(props.requests[type]).length != 0 &&
+          Object.entries(props.requests[type]).map(([key, { title, url }]) => (
             <h2
               key={key}
               onClick={() => {
