@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
+  env: {
+    YT_API_KEY: process.env.YT_API_KEY,
+  },
   reactStrictMode: true,
   images: {
     domains: ["image.tmdb.org"],
