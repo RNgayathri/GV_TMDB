@@ -19,8 +19,9 @@ function HeaderItems({ title, Icon, href, id, onClickSet }) {
         // let block = document.getElementById("scrollableDiv");
         // block && block.scrollIntoView({ behavior: "auto", block: "start" });
       }}
+      className="inline-block text-center group flex-col items-center w-24 sm:w-20 hover:text-white"
     >
-      <div className="group flex-col items-center w-4 sm:w-20 hover:text-white">
+      <div>
         <Icon
           key={id}
           className="h-6 mb-1 group-hover:animate-bounce inline-block w-full"

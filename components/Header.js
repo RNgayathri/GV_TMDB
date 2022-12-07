@@ -33,7 +33,7 @@ function Header(props) {
           width={200}
           height={100}
         />
-        <div className="flex justify-evenly max-w-2xl">
+        <div className="flex justify-evenly max-w-2xl mt-5">
           <HeaderItems
             title="Movies"
             Icon={FilmIcon}

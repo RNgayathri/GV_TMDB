@@ -63,7 +63,7 @@ export default function Home(props) {
         />
       </div>
       <div
-        className="overflow-y-scroll max-h-full md:max-h-screen pb-44"
+        className="overflow-y-scroll max-h-screen md:max-h-screen pb-44"
         id="scrollableDiv"
       >
         <InfiniteScroll
