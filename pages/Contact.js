@@ -8,8 +8,8 @@ function Contact() {
   return (
     <div>
       <Header />
-      <dl className="sm:grid m-10 items-center grid grid-flow-col h-96 justify-items-center">
-        <div className="bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-5 sm:gap-4 sm:px-6 m-5 shadow sm:rounded-2xl h-80 flex justify-around items-center w-80">
+      <dl className="m-10 overflow-y-scroll max-h-screen pb-80 md:max-h-screen sm:grid md:grid-cols-2 justify-items-center items-center justify-center">
+        <div className="bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-5 gap-4 m-5 shadow rounded-2xl h-80 flex justify-around items-center min-w-[50%]">
           {/* <dt className="text-lg font-bold text-gray-900">Mail to:</dt> */}
           <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0 cursor-pointer">
             <a
@@ -23,7 +23,7 @@ function Contact() {
             </a>
           </dd>
         </div>
-        <div className="bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-5 sm:gap-4 sm:px-6 m-5 shadow sm:rounded-2xl h-80 flex justify-around items-center w-80">
+        <div className="bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-5 sm:gap-4 sm:px-6 m-5 shadow rounded-2xl h-80 flex justify-around items-center min-w-[50%]">
           {/* <dt className="text-lg font-bold text-gray-900">
             Frontend FrameWork
           </dt> */}
