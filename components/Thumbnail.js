@@ -61,7 +61,7 @@ const Thumbnail = forwardRef(({ result, updateId, popUp }, ref) => {
         </p>
       </div>
       <BrowserView>
-        <div className="absolute top-0 left-0 w-full h-full z-50 drop-shadow-xl opacity-0 hover:opacity-100">
+        <div className="absolute top-0 left-0 w-full h-full z-50 drop-shadow-xl opacity-0 hover:opacity-100 select-none">
           <div className="flex justify-center items-center w-full h-full">
             <div className="backdrop-blur-xl bg-black/30 rounded-full p-4 flex flex-row justify-center items-center">
               <PlayIcon className="h-8 mx-2" />
@@ -73,7 +73,7 @@ const Thumbnail = forwardRef(({ result, updateId, popUp }, ref) => {
       <MobileView>
         <div className="absolute top-0 left-0 w-full h-full z-50 drop-shadow-xl">
           <div className="flex justify-center items-center w-full h-full">
-            <div className="backdrop-blur-xl bg-black/30 rounded-full p-4 flex flex-row justify-center items-center">
+            <div className="backdrop-blur-xl bg-black/30 rounded-full p-4 flex flex-row justify-center items-center select-none ">
               <PlayIcon className="h-8 mx-2" />
               <h2>Trailer</h2>
             </div>

@@ -8,7 +8,7 @@ function Nav(props) {
   let type = router.query.type;
   return (
     <nav className="relative">
-      <div className="flex px-10 sm:px-20 text-2xl whitespace-nowrap space-x-10 sm:space-x-20 overflow-x-scroll scrollbar-hide">
+      <div className="flex px-10 sm:px-20 text-2xl whitespace-nowrap space-x-10 sm:space-x-20 overflow-x-scroll scrollbar-hide select-none">
         {props.requests &&
           props.requests[type] != undefined &&
           Object.entries(props.requests[type]).length != 0 &&
