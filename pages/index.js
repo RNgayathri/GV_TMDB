@@ -5,6 +5,7 @@ import requests from "../Utils/requests";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
 import Results from "../components/Results";
+import YoutubeEmbed from "../components/YoutubeEmbed";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useRouter } from "next/router";
 
@@ -13,6 +14,8 @@ const API_KEY = process.env.API_KEY;
 export default function Home(props) {
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
+  const [id, setID] = useState(null);
+  const [popUp, setPopup] = useState(false);
   const router = useRouter();
   let type = router.query.type;
 
@@ -90,9 +93,22 @@ export default function Home(props) {
             </p>
           }
         >
-          <Results result={data} type={type} />
+          <Results
+            result={data}
+            type={type}
+            updateId={(ID) => setID(ID)}
+            popUp={(value) => setPopup(value)}
+          />
         </InfiniteScroll>
       </div>
+      {popUp == true && (
+        <div className="justify-center items-center flex fixed top-0 left-0 w-screen h-screen z-50 backdrop-blur-xl bg-black/30">
+          <YoutubeEmbed
+            embedId={"ZlNFpri-Y40"}
+            popUp={(value) => setPopup(value)}
+          />
+        </div>
+      )}
     </div>
   );
 }

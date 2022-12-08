@@ -1,7 +1,8 @@
 import React, { forwardRef, useState } from "react";
 import { HandThumbUpIcon } from "@heroicons/react/24/outline";
+import { PlayIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
-import YoutubeEmbed from "./YoutubeEmbed";
+import { BrowserView, MobileView } from "react-device-detect";
 const API_KEY_YT = process.env.YT_API_KEY;
 
 async function getVideo(search) {
@@ -15,7 +16,7 @@ async function getVideo(search) {
   };
 }
 
-const Thumbnail = forwardRef(({ result }, ref) => {
+const Thumbnail = forwardRef(({ result, updateId, popUp }, ref) => {
   const [id, setId] = useState(null);
   const Base_URL = "http://image.tmdb.org/t/p/w500";
   return (
@@ -27,6 +28,8 @@ const Thumbnail = forwardRef(({ result }, ref) => {
           `${result.title || result.original_name} trailer`
         ).then((res) => {
           setId(res.props.results[0].id.videoId);
+          updateId(res.props.results[0].id.videoId);
+          popUp(true);
         });
       }}
     >
@@ -36,6 +39,7 @@ const Thumbnail = forwardRef(({ result }, ref) => {
         src={`${Base_URL}${result.backdrop_path || result.poster_path}`}
         width={1000}
         height={400}
+        className="max-h-64"
         alt={result.title || result.original_name}
         priority
         objectFit="contain"
@@ -54,11 +58,26 @@ const Thumbnail = forwardRef(({ result }, ref) => {
           {result.vote_count}
         </p>
       </div>
-      {id != null && (
-        <div className="absolute top-0 left-0 z-50 w-full h-full">
-          <YoutubeEmbed embedId={id} />
+      <BrowserView>
+        <div className="absolute top-0 left-0 w-full h-full z-50 drop-shadow-xl opacity-0 hover:opacity-100">
+          <div className="flex justify-center items-center w-full h-full">
+            <div className="backdrop-blur-xl bg-black/30 rounded-full p-4 flex flex-row justify-center items-center">
+              <PlayIcon className="h-8 mx-2" />
+              <h2>Trailer</h2>
+            </div>
+          </div>
         </div>
-      )}
+      </BrowserView>
+      <MobileView>
+        <div className="absolute top-0 left-0 w-full h-full z-50 drop-shadow-xl">
+          <div className="flex justify-center items-center w-full h-full">
+            <div className="backdrop-blur-xl bg-black/30 rounded-full p-4 flex flex-row justify-center items-center">
+              <PlayIcon className="h-8 mx-2" />
+              <h2>Trailer</h2>
+            </div>
+          </div>
+        </div>
+      </MobileView>
     </div>
   );
 });
