@@ -101,12 +101,9 @@ export default function Home(props) {
           />
         </InfiniteScroll>
       </div>
-      {popUp == true && (
+      {popUp == true && id != null && (
         <div className="justify-center items-center flex fixed top-0 left-0 w-screen h-screen z-50 backdrop-blur-xl bg-black/30">
-          <YoutubeEmbed
-            embedId={"ZlNFpri-Y40"}
-            popUp={(value) => setPopup(value)}
-          />
+          <YoutubeEmbed embedId={id} popUp={(value) => setPopup(value)} />
         </div>
       )}
     </div>

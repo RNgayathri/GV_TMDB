@@ -27,9 +27,11 @@ const Thumbnail = forwardRef(({ result, updateId, popUp }, ref) => {
         let res = getVideo(
           `${result.title || result.original_name} trailer`
         ).then((res) => {
-          setId(res.props.results[0].id.videoId);
-          updateId(res.props.results[0].id.videoId);
-          popUp(true);
+          if (res && res.props && res.props.results && res.props.results[0]) {
+            setId(res.props.results[0].id.videoId);
+            updateId(res.props.results[0].id.videoId);
+            popUp(true);
+          }
         });
       }}
     >
