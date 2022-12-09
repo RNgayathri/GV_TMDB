@@ -19,9 +19,23 @@ export default function Home(props) {
   const router = useRouter();
   let type = router.query.type;
 
+  function fetchData() {
+    const url = `https://api.themoviedb.org/3/trending/all/week?api_key=${API_KEY}&language=en-us&page=1`;
+    const request = fetch(url).then((res) => res.json());
+    return {
+      props: {
+        results: request.results,
+      },
+    };
+  }
+
   useEffect(() => {
-    if (router.query == {}) {
+    if (router.query == {} && data == []) {
       router.push(`/?type=movies&genre=fetchingTrending&page=1`);
+      async () => {
+        const updatedData = await fetchData();
+        setData(updatedData);
+      };
     } else {
       let updatedData = [];
       if (page != 1) {
