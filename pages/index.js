@@ -20,12 +20,16 @@ export default function Home(props) {
   let type = router.query.type;
 
   useEffect(() => {
-    let updatedData = [];
-    if (page != 1) {
-      updatedData = [...data, ...props.results];
-      setData(updatedData);
+    if (router.query == {}) {
+      router.push(`/?type=movies&genre=fetchingTrending&page=1`);
     } else {
-      setData(props.results);
+      let updatedData = [];
+      if (page != 1) {
+        updatedData = [...data, ...props.results];
+        setData(updatedData);
+      } else {
+        setData(props.results);
+      }
     }
   }, [props.results]);
   return (
