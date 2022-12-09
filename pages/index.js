@@ -94,33 +94,32 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps(context) {
-  if (context.query == {}) {
-    return {
-      redirect: {
-        source: "/",
-        permanent: false,
-        destination: "/?type=movies&genre=fetchingTrending&page=1",
-      },
-      props: {},
-    };
-  } else {
-    const genre = context.query.genre;
-    const page = context.query.page || 1;
-    const type = context.query.type || "movies";
-    const url =
-      type == "movies"
-        ? `https://api.themoviedb.org/3${
-            requests.movies[genre]?.url || requests.movies.fetchTrending.url
-          }&page=${page}`
-        : `https://api.themoviedb.org/3${
-            requests.tvShows[genre]?.url ||
-            requests.tvShows.fetchingTopRated.url
-          }&page=${page}`;
-    const request = await fetch(url).then((res) => res.json());
-    return {
-      props: {
-        results: request.results,
-      },
-    };
-  }
+  // if (context.query == {}) {
+  //   return {
+  //     redirect: {
+  //       source: "/",
+  //       permanent: false,
+  //       destination: "/?type=movies&genre=fetchingTrending&page=1",
+  //     },
+  //     props: {},
+  //   };
+  // } else {
+  const genre = context.query.genre;
+  const page = context.query.page || 1;
+  const type = context.query.type || "movies";
+  const url =
+    type == "movies"
+      ? `https://api.themoviedb.org/3${
+          requests.movies[genre]?.url || requests.movies.fetchTrending.url
+        }&page=${page}`
+      : `https://api.themoviedb.org/3${
+          requests.tvShows[genre]?.url || requests.tvShows.fetchingTopRated.url
+        }&page=${page}`;
+  const request = await fetch(url).then((res) => res.json());
+  return {
+    props: {
+      results: request.results,
+    },
+  };
+  // }
 }
