@@ -3,15 +3,8 @@
         {
             "source": "/",
             "destination": "/?type=movies&genre=fetchingTrending&page=1",
-            "permanent": true,
-            "has": [
-              {
-                "type": "cookie",
-                "key": "authorized",
-                "value": "false"
-              }
-            ]
-          }
+            "permanent": true
+        }
     ]
   }
   
