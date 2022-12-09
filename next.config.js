@@ -12,8 +12,7 @@ module.exports = {
     return [
       {
         source: "/",
-        destination:
-          "https://www.gayathri.app/?type=movies&genre=fetchingTrending&page=1",
+        destination: "/Contact",
         permanent: true,
         has: [
           {
