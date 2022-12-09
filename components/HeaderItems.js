@@ -17,9 +17,8 @@ function HeaderItems({ title, Icon, href, id, onClickSet }) {
       href={href}
       onClick={() => {
         onClickSet && onClickSet();
-        //window.scrollTo(0, 0);
-        // let block = document.getElementById("scrollableDiv");
-        // block && block.scrollIntoView({ behavior: "auto", block: "start" });
+        var myDiv = document.getElementById("scrollableDiv");
+        myDiv.scrollTop = 0;
       }}
       className="inline-block text-center group flex-col items-center w-24 sm:w-20 hover:text-white"
     >

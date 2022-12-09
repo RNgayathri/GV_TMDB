@@ -18,6 +18,8 @@ function Nav(props) {
               onClick={() => {
                 router.push(`/?type=${type}&genre=${key}&page=1`);
                 props.onClickSet();
+                var myDiv = document.getElementById("scrollableDiv");
+                myDiv.scrollTop = 0;
               }}
               style={{
                 fontWeight: genre == key ? "bold" : "normal",
