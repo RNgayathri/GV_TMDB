@@ -2,7 +2,8 @@
     "redirects": [
         {
             "source": "/",
-            "destination": "/?type=movies&genre=fetchingTrending&page=1"
+            "destination": "/?type=movies&genre=fetchingTrending&page=1",
+            "permanent": false
         }
     ]
   }
