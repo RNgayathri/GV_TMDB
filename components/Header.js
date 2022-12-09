@@ -1,5 +1,5 @@
 import React from "react";
-import reactImg from "../Images/Subheading.gif";
+import reactImg from "./Images/Subheading.gif";
 import Image from "next/image";
 import HeaderItems from "./HeaderItems";
 import {
@@ -14,7 +14,7 @@ import {
 import { GlobeAltIcon } from "@heroicons/react/24/solid";
 import { useRouter } from "next/router";
 
-function Header() {
+function Header(props) {
   const router = useRouter();
   let type = router.query.type;
   return (
@@ -33,17 +33,19 @@ function Header() {
           width={200}
           height={100}
         />
-        <div className="flex justify-evenly max-w-2xl">
+        <div className="flex justify-evenly max-w-2xl mt-5">
           <HeaderItems
             title="Movies"
             Icon={FilmIcon}
             id="movies"
+            onClickSet={props.onClickSet}
             href="/?type=movies&genre=fetchingTrending&page=1"
           />
           <HeaderItems
             title="TV"
             id="tvShows"
             Icon={TvIcon}
+            onClickSet={props.onClickSet}
             href="/?type=tvShows&genre=fetchingTopRated&page=1"
           />
           <HeaderItems

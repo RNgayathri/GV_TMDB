@@ -10,10 +10,10 @@ export default {
       title: "Top Rated",
       url: `/movie/top_rated?api_key=${API_KEY}&language=en-us`,
     },
-    fetchingRomance: {
-      title: "Romance",
-      url: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
-    },
+    // fetchingRomance: {
+    //   title: "Romance",
+    //   url: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
+    // },
     fetchingHorror: {
       title: "Horror",
       url: `/discover/movie?api_key=${API_KEY}&with_genres=27`,

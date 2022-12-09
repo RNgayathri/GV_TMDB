@@ -22,7 +22,7 @@ function About() {
           </p> */}
       {/* </div> */}
       {/* <div className="border-t border-gray-200"> */}
-      <dl className="sm:grid md:grid-cols-2 m-10">
+      <dl className="m-10 overflow-y-scroll max-h-screen pb-80 md:max-h-screen sm:grid md:grid-cols-2 scrollbar-hide">
         <div className="bg-gradient-to-r from-[#cfe2e5] to-blue-500 px-4 py-5 sm:gap-4 sm:px-6 m-5 shadow sm:rounded-lg ">
           <dt className="text-lg font-bold text-gray-900">CSS</dt>
           <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
@@ -170,7 +170,7 @@ function About() {
           </dd>
         </div> */}
       </dl>
-      <footer className="absolute bottom-0">
+      <footer className="absolute bottom-0 right-0">
         <p>© 2022 Gayathri R N</p>
       </footer>
     </div>

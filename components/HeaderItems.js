@@ -2,17 +2,27 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-function HeaderItems({ title, Icon, href, id }) {
+function HeaderItems({ title, Icon, href, id, onClickSet }) {
   const router = useRouter();
   let type =
     Object.keys(router.query) != 0
       ? router.query.type
       : router.pathname == "/About"
       ? "about"
-      : "contact";
+      : router.pathname == "/Contact"
+      ? "contact"
+      : "movies";
   return (
-    <Link href={href}>
-      <div className="group flex-col items-center w-4 sm:w-20 hover:text-white">
+    <Link
+      href={href}
+      onClick={() => {
+        onClickSet && onClickSet();
+        var myDiv = document.getElementById("scrollableDiv");
+        myDiv.scrollTop = 0;
+      }}
+      className="inline-block text-center group flex-col items-center w-24 sm:w-20 hover:text-white"
+    >
+      <div>
         <Icon
           key={id}
           className="h-6 mb-1 group-hover:animate-bounce inline-block w-full"
