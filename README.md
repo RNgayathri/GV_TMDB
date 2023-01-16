@@ -1,6 +1,6 @@
 ## Demo
 
-<video src="./images/GV TMDB.MP4" alt="Example-1" />
+("./images/GV TMDB.MP4")
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
