@@ -1,6 +1,6 @@
 ## Demo
 
-<img src="./images/GVTMDB.gif" alt="Example-1" width={150} height={100}/>
+<img src="./images/GVTMDB.gif" alt="Example-1" width="350" height="200"/>
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
