@@ -1,6 +1,7 @@
 ## Demo
 
-<img src="./images/GVTMDB.gif" alt="Example-1" width="350" height="200"/>
+https://user-images.githubusercontent.com/23417287/212842503-467243b9-dd8d-4cd2-81dd-0a66abfa32bb.mov
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
@@ -15,3 +16,9 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+
+
+
+
+
